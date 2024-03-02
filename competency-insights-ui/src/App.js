@@ -1,8 +1,14 @@
 import './App.css';
-import Login from './pages/Login';
+
+import SideNav2 from './components/SideNav';
 
 function App() {
-  return ( <Login />);
+  return ( 
+  <div>
+  {/* <SideNav/> */}
+  <SideNav2/>
+  </div>
+  );
 }
 
 export default App;
