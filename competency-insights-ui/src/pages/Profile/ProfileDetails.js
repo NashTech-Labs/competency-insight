@@ -5,11 +5,11 @@ import CallOutlinedIcon from '@mui/icons-material/CallOutlined';
 import { Contribution } from "./components/Contribution";
 import { Footer, Header, Navbar } from "../../components";
 import { useMsal } from "@azure/msal-react";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const ProfileDetails = () => {
     const [user, setUser] = useState({});
-    const[categories,setCategories] =useState({});
+    const [categories, setCategories] = useState({});
     const [category, setCategory] = useState("Blogs");
     const [m_strUser, setm_strUser] = useState("");
     const { accounts } = useMsal();
@@ -47,9 +47,9 @@ export const ProfileDetails = () => {
     };
 
     return (
-        <>
-        <Header />
-            <section className="bg-gray-200 p-4 min-h-screen">
+        <main>
+
+            <section className=" p-4 min-h-screen">
                 <div className="flex flex-col sm:flex-row items-center bg-white">
                     <div className="w-40 m-4">
                         <img
@@ -62,15 +62,15 @@ export const ProfileDetails = () => {
                         <div className="sm:items-center font-bold text-xl mb-2">{user.Name}</div>
                         <div className="flex flex-wrap justify-center sm:justify-start">
                             <div className="mr-4 mb-2">
-                                <FmdGoodOutlinedIcon/>
+                                <FmdGoodOutlinedIcon />
                                 {user.location}
                             </div>
                             <div className="mr-4 mb-2">
-                                <MailOutlineOutlinedIcon/>
+                                <MailOutlineOutlinedIcon />
                                 {user.Email}
                             </div>
                             <div className="mr-4 mb-2">
-                                <CallOutlinedIcon/>
+                                <CallOutlinedIcon />
                                 {user.contact}
                             </div>
                             <hr className="w-full mt-4 mb-4" />
@@ -124,7 +124,7 @@ export const ProfileDetails = () => {
                     <Contribution contributionType={user.Contributions[category]} />
                 )}
             </section>
-        <Footer />
-        </>
+
+        </main>
     )
 }

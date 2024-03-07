@@ -1,10 +1,13 @@
 import './App.css';
+import { Footer, Header } from './components';
 import {AppRouters} from "./routes/AppRouters";
 
 function App() {
   return (
     <div className="App dark:bg-dark"> 
-      <AppRouters /> 
+    <Header/>
+      <AppRouters />
+      <Footer/> 
     </div>
   );
 } 
