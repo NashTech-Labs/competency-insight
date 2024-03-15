@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/")
 public class StatusController {
 
     @GetMapping
@@ -14,7 +13,7 @@ public class StatusController {
     }
 
     @GetMapping
-    @RequestMapping("cs")
+    @RequestMapping("/cs")
     public String appRunningContextPath(){
         return "Contribution Service is Running...at context path";
     }
